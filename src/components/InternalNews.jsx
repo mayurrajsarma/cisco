@@ -15,9 +15,9 @@ const InternalNews = () => {
 },[])
 
   return (
-    <div className='mt-14'>
+    <div className='mt-25'>
         <p className='text-3xl'>Inside Cisco</p>
-        <div className='flex'>
+        <div className='flex '>
           {newsCard.map(data=> 
           <NewsCard 
               key={data._id}

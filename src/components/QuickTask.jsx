@@ -11,12 +11,12 @@ const QuickTask = () => {
     <div className='mt-10'>
         <div className='flex justify-center'>
             <div className='inline-flex justify-center space-x-6 p-4'>
-                <div className='flex flex-col items-center'><img src={icon1}/><p>Downloads</p></div>
-                <div className='flex flex-col items-center'><img src={icon2}/><p>Certifications</p></div>
-                <div className='flex flex-col items-center'><img src={icon3}/><p>Cisco Validated</p></div>
-                <div className='flex flex-col items-center'><img src={icon4}/><p>Training</p></div>
-                <div className='flex flex-col items-center'><img src={icon5}/><p>Community</p></div>
-                <div className='flex flex-col items-center'><img src={icon6}/><p>Support</p></div>
+                <div className='flex flex-col items-center mx-7'><img src={icon1}/><p>Downloads</p></div>
+                <div className='flex flex-col items-center mx-7'><img src={icon2}/><p>Certifications</p></div>
+                <div className='flex flex-col items-center mx-7'><img src={icon3}/><p>Cisco Validated</p></div>
+                <div className='flex flex-col items-center mx-7'><img src={icon4}/><p>Training</p></div>
+                <div className='flex flex-col items-center mx-7'><img src={icon5}/><p>Community</p></div>
+                <div className='flex flex-col items-center mx-7'><img src={icon6}/><p>Support</p></div>
             </div>
         </div>
     </div>

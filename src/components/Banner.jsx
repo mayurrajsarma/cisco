@@ -18,7 +18,7 @@ const Banner = () => {
   },[]);
 
   return bannerData &&  (
-    <div>
+    <div className='relative'>
         <div className='absolute text-white top-1/2 transform -translate-y-1/2 left-30'>
             <p className='text-6xl font-semibold'>{bannerData.title}</p>
             <p className='mt-5'>{bannerData.description}</p>
