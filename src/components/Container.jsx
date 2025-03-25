@@ -9,17 +9,21 @@ import client from '../../ciscodemo/lib/client'
 const Container = () => {
 
     const [cardData, setCardData] = useState([]) ;
+    const [hCard,setHCard] = useState([]) ;
+    
     
     useEffect(()=> {
-
-        // const fun = async
         client.fetch('*[_type == "card"]')
         .then((res)=> {
             // console.log(res);
             setCardData(res) ;
         });
 
-        
+        client.fetch('*[_type == "hcard"]')
+        .then((res)=> {
+            // console.log(res);
+            setHCard(res) ;
+        });
     },[])  
 
     //if(cardData.length === 0) return ;
@@ -33,8 +37,12 @@ const Container = () => {
                     <ContainerCard key={data._id} image={data?.cardImage} title={data.title} description={data.description}/>
                 )}
             </div>
-            <CardHorizontal/>
+            <div>
+                {hCard.map((data)=> <CardHorizontal key={data._id} image={data?.cardImage} title={data.title} description={data.description} buttonText={data.btnText}/>)}
+            </div>
+           
             <InternalNews/>
+           
         </div>
     </div>
   )

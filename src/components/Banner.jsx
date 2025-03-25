@@ -1,16 +1,31 @@
-import React from 'react'
-import {BANNER_IMG} from "../utils/constants"
+import React, { useEffect, useState } from 'react'
+import client from '../../ciscodemo/lib/client'
+import { urlForImage } from '../../ciscodemo/lib/image';
 
 const Banner = () => {
-  return (
+
+  
+  const [bannerData,setBannerData] = useState([]) ;
+  // const {image} = bannerData.bannerImage ;
+  useEffect(()=> {
+    client.fetch('*[_type == "banner"][0]')
+    .then((res)=> {
+      console.log(res) ;
+      setBannerData(res)
+    }) ;
+
+    console.log(bannerData.title) ;
+  },[]);
+
+  return bannerData &&  (
     <div>
         <div className='absolute text-white top-1/2 transform -translate-y-1/2 left-30'>
-            <p className='text-6xl font-semibold'>Making AI work for you</p>
-            <p className='mt-5'>Cisco AI is where the AI hype ends and meaningful help begins.</p>
-            <button className='text-black font-semibold bg-white rounded-4xl relative px-5 py-2 mt-5'>Explore Cisco AI</button>
+            <p className='text-6xl font-semibold'>{bannerData.title}</p>
+            <p className='mt-5'>{bannerData.description}</p>
+            <button className='text-black font-semibold bg-white rounded-4xl relative px-5 py-2 mt-5'>{bannerData.btnText}</button>
         </div>
         <div className=''>
-            <img src={BANNER_IMG}/>
+            {bannerData.bannerImage && <img src={urlForImage(bannerData.bannerImage).url()} alt="banner image"/>}
         </div>
     </div>
   )

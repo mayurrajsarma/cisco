@@ -1,23 +1,19 @@
 import React from 'react'
 
-const NewsCard = ({ header, title, description, linkText, linkUrl }) => {
+const NewsCard = ({ header, title, description, btnText, linkUrl }) => {
   return (
     <div className='mt-5'>
         <div className="max-w-md  rounded-lg  overflow-hidden">
-            <div className="py-2 font-semibold">
-            Report
-            </div>
+            <div className="py-2 font-semibold">{header}</div>
             <div className="py-4">
-                <h3 className="text-lg font-semibold">Cisco 2024 AI Readiness Index</h3>
-                <p className="text-gray-600 text-sm mt-2">Worldwide, companies know the AI deployment clock is ticking. And the pressure is relentless.</p>
+                <h3 className="text-lg font-semibold">{title}</h3>
+                <p className="text-gray-600 text-sm mt-2">{description}</p>
                 <a 
                     href={linkUrl} 
                     className="mt-4 inline-block text-blue-500 hover:underline text-sm font-medium"
                     target="_blank" 
                     rel="noopener noreferrer"
-                >
-                    Get the report
-                </a>
+                >{btnText}</a>
             </div>
         </div>
     </div>
