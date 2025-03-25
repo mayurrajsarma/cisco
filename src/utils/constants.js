@@ -1,0 +1,1 @@
+export const BANNER_IMG = "https://www.cisco.com/content/dam/cisco-cdc/site/images/heroes/homepage/homepage-hero-ai-3200x1372.jpg" ;
