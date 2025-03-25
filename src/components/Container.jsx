@@ -34,7 +34,7 @@ const Container = () => {
             <div className='flex justify-between'>
                 {cardData.map((data)=> 
                     // console.log(data.title) 
-                    <ContainerCard key={data._id} image={data?.cardImage} title={data.title} description={data.description}/>
+                    <ContainerCard key={data._id} image={data?.cardImage} title={data.title} description={data.description} linktext={data.linkText} linkURL={data.link}/>
                 )}
             </div>
             <div>

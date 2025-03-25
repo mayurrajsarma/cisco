@@ -19,6 +19,11 @@ export default {
         type: 'string',
       },
       {
+        name: 'btnUrl',
+        title: 'Button URL',
+        type: 'url',
+      },
+      {
         name: 'bannerImage',
         title: 'Banner Image',
         type: 'image',
