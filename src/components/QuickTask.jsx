@@ -8,7 +8,7 @@ import icon6 from '../assets/icon_training.svg';
 
 const QuickTask = () => {
   return (
-    <div>
+    <div className='mt-10'>
         <div className='flex justify-center'>
             <div className='inline-flex justify-center space-x-6 p-4'>
                 <div className='flex flex-col items-center'><img src={icon1}/><p>Downloads</p></div>

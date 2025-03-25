@@ -14,7 +14,7 @@ const Header = () => {
             </ul>
             <ul className='flex'>
                 <li className='mx-3'>Explore cisco</li>
-                <li className='mx-3'>search</li>
+                <li className='mx-3'>Search</li>
             </ul>
         </div>
     </div>
