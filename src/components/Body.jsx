@@ -7,7 +7,7 @@ import ChatBot from './ChatBot'
 
 const Body = () => {
   return (
-    <div className='bg-gray-100'>
+    <div className='bg-gray-100 '>
         <Banner/>
         <QuickTask/>
         <Container/>
